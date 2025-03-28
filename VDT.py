@@ -16,7 +16,7 @@ if "rpm_history" not in st.session_state:
     st.session_state.rpm_history = []
 if "speed_history" not in st.session_state:
     st.session_state.speed_history = []
-if "engine_load_history" not in st.session_state:
+if "engine_history" not in st.session_state:
     st.session_state.engine_history = []
 
 
