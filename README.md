@@ -23,12 +23,14 @@ cd vehicle-diagnostic-tool
 2.Install dependencies
 pip install -r requirements.txt
 
-3. Add ONB Dataset
-   Place your obd_dataset.csv inside the /data folder.
+3.Add ONB Dataset
+Place your obd_dataset.csv inside the /data folder.
 
 Run the App
 streamlit run app.py
 Open your browser at http://localhost:8501
+
+![alt text](<Screenshot 2025-03-29 130447.png>)
 
 Future Improvements:
 
