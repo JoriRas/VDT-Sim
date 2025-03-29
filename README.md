@@ -30,7 +30,7 @@ Run the App
 streamlit run app.py
 Open your browser at http://localhost:8501
 
-![alt text](<Screenshot 2025-03-29 130447.png>)
+![alt text](Screenshot_1128.png)
 
 Future Improvements:
 

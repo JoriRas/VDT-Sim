@@ -77,7 +77,7 @@ if st.button("▶️ Simulate Vehicle Data"):
     col3.metric("Engine Load", f"{engine_load} %")
 
     # ---Graphs---
-    st.subheader("📈 Speed Data History")
+    st.subheader("📈 Vehicle Data History")
 
 col1, col2, col3 = st.columns(3)
 
