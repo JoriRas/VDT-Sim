@@ -55,27 +55,22 @@ if st.button("▶️ Simulate Vehicle Data"):
     # ---Graphs---
     st.subheader("📈 Speed Data History")
 
-    history_df = pd.DataFrame({
-        "Speed": st.session_state.speed_history
-    })
+col1, col2, col3 = st.columns(3)
 
-    st.line_chart(history_df)
+with col1:
+    st.write("### RPM")
+    rpm_df = pd.DataFrame({"RPM": st.session_state.rpm_history})
+    st.line_chart(rpm_df)
 
-    st.subheader("📈 RPM Data History")
+with col2:
+    st.write("### Speed")
+    speed_df = pd.DataFrame({"Speed": st.session_state.speed_history})
+    st.line_chart(speed_df)
 
-    history_df = pd.DataFrame({
-        "RPM": st.session_state.rpm_history
-    })
-
-    st.line_chart(history_df)
-
-    st.subheader("📈 Engine load Data History")
-
-    history_df = pd.DataFrame({
-        "Engine_Load": st.session_state.engine_history
-    })
-
-    st.line_chart(history_df)
+with col3:
+    st.write("### Engine Load")
+    engine_df = pd.DataFrame({"Engine Load": st.session_state.engine_history})
+    st.line_chart(engine_df)
 
 if show_error and selected_code:
     error_info = data[data['DTC'] == selected_code]
