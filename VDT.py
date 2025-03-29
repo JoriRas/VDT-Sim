@@ -53,11 +53,25 @@ if st.button("▶️ Simulate Vehicle Data"):
     col3.metric("Engine Load", f"{engine_load} %")
 
     # ---Graphs---
-    st.subheader("📈 Vehicle Data History")
+    st.subheader("📈 Speed Data History")
 
     history_df = pd.DataFrame({
-        "RPM": st.session_state.rpm_history,
-        "Speed": st.session_state.speed_history,
+        "Speed": st.session_state.speed_history
+    })
+
+    st.line_chart(history_df)
+
+    st.subheader("📈 RPM Data History")
+
+    history_df = pd.DataFrame({
+        "RPM": st.session_state.rpm_history
+    })
+
+    st.line_chart(history_df)
+
+    st.subheader("📈 Engine load Data History")
+
+    history_df = pd.DataFrame({
         "Engine_Load": st.session_state.engine_history
     })
 
