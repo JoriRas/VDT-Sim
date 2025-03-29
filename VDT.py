@@ -19,19 +19,37 @@ if "speed_history" not in st.session_state:
 if "engine_history" not in st.session_state:
     st.session_state.engine_history = []
 
+# --- Sample error codes ---
+sample_error_codes = [
+    ("P0300", "Random/Multiple Cylinder Misfire Detected"),
+    ("P0420", "Catalys System Efficiency Below Threshold"),
+    ("P0171", "System Too Lean (Bank 1)")
+]
 
 #----Sidebar---
 st.sidebar.title("Diagnostic Tool Controls")
-show_error = st.sidebar.checkbox("Simulate Error Code", value=False)
-selected_code =None
-if show_error:
-    selected_code = st.sidebar.selectbox("Choose Errror Code", data["DTC"].unique())
 
 if st.sidebar.button("Clear Data"):
     st.session_state.rpm_history = []
     st.session_state.speed_history = []
     st.session_state.engine_history = []
     st.success("Data history cleared!")
+
+
+# --- Random Error Injection ---
+if st.sidebar.button("Inject Random Error"):
+    random_code, description = random.choice(sample_error_codes)
+    st.session_state.random_error = (random_code, description)
+
+
+# --- Show Injected Error ---
+if "random_error" in st.session_state:
+    code, desc = st.session_state.random_error
+    st.subheader("Random Injected Error Code")
+    st.write(f"**Code:** {code}")
+    st.write(f"**Description:** {desc}")
+    if st.button("Clear Injected Error"):
+        del st.session_state.random_error
 
 #---Main Panel---
 st.title("Vehicle Diagnostic Tool Simulator")
@@ -78,11 +96,6 @@ with col3:
     engine_df = pd.DataFrame({"Engine Load": st.session_state.engine_history})
     st.line_chart(engine_df)
 
-if show_error and selected_code:
-    error_info = data[data['DTC'] == selected_code]
-    st.subheader("Active DTC (Diacnostiuc Trouble Code)")
-    st.write(f"**Code** {selected_code}")
-    st.write(f"**Description:** {error_info['Description'].values[0]}")
 
 #Footer
 st.write("----")
