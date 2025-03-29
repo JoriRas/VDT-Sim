@@ -47,3 +47,5 @@ Mobile-friendly layout
 💡 Project Purpose
 This project was created as part of a professional portfolio to demonstrate knowledge of vehicle systems, diagnostic protocols (OBD-II), data visualization, and Python software development.
 It aligns with roles involving vehicle electrical and software systems, such as the Vehicle Systems Specialist position at Patria.
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://vdt-sim-jv2fn3jgcg4ihr6vy49xvu.streamlit.app/)
