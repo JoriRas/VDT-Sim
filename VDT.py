@@ -4,6 +4,14 @@ import pandas as pd
 import random
 import time
 
+st.set_page_config(
+    page_title="VDT-Sim | Vehicle Diagnostic Tool",
+    page_icon="🚗",
+    layout="wide"
+)
+st.sidebar.title("🚗 VDT-Sim")
+st.sidebar.info("Developed by Jori Ras | For portfolio use")
+
 # load dataset
 @st.cache_data
 def load_data():
@@ -29,7 +37,7 @@ sample_error_codes = [
 #----Sidebar---
 st.sidebar.title("Diagnostic Tool Controls")
 
-if st.sidebar.button("Clear Data"):
+if st.sidebar.button("🗑️ Clear Data"):
     st.session_state.rpm_history = []
     st.session_state.speed_history = []
     st.session_state.engine_history = []
@@ -37,7 +45,7 @@ if st.sidebar.button("Clear Data"):
 
 
 # --- Random Error Injection ---
-if st.sidebar.button("Inject Random Error"):
+if st.sidebar.button("💥 Inject Random Error"):
     random_code, description = random.choice(sample_error_codes)
     st.session_state.random_error = (random_code, description)
 
@@ -52,7 +60,7 @@ if "random_error" in st.session_state:
         del st.session_state.random_error
 
 #---Main Panel---
-st.title("Vehicle Diagnostic Tool Simulator")
+st.title("🚗 Vehicle Diagnostic Tool Simulator")
 
 # Scan Button Animation
 if st.button ("🔍 Scan Vehicle"):
@@ -98,5 +106,5 @@ with col3:
 
 
 #Footer
-st.write("----")
-st.caption("Simple diagnostic Tool Simulation • Streamlit + Python")
+st.markdown("---")
+st.markdown("© 2025 Jori Ras — Built with [Streamlit](https://streamlit.io)")

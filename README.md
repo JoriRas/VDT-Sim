@@ -1,24 +1,25 @@
 # Vehicle-Diagnostic-Tool
 
-Vehicle Diagnostic Tool Simulation
+🚗 VDT-Sim — Vehicle Diagnostic Tool Simulation
 
-A simple, interactive Vehicle Diagnostic Tool Simulator built using Streamlit + Python.
-This project simulates real-time vehicle data like RPM, Speed, and Engine Load, and allows you to simulate OBD-II error codes from a dataset.
+VDT-Sim is a lightweight, interactive Vehicle Diagnostic Tool Simulator built using Python & Streamlit.
+This project simulates real-time vehicle telemetry data such as RPM, Speed, and Engine Load, along with simulated OBD-II Diagnostic Trouble Codes (DTCs).
 
-Real-time simulation of RPM, Speed, and Engine Load data
+It was developed as a practical demonstration of real-time vehicle system data visualization and diagnostic simulation.
 
-Live updating graphs of vehicle data history
+🎯 Features
+✅ Real-time simulation of RPM, Speed, and Engine Load
+✅ Live updating graphs with historical data
+✅ "🔍 Scan Vehicle" button with animated feedback
+✅ "🗑️ Clear Data" button to reset the simulation
+✅ "💥 Inject Random Error" option to simulate fault codes
+✅ Simple & responsive web interface (Streamlit)
+✅ Designed as a learning and diagnostic demonstration tool
 
-"🔍 Scan Vehicle" button with loading animation
-
-Simulate active Diagnostic Trouble Codes (DTC)
-
-Simple & lightweight web interface
-
-Installation
+🖥️ Installation
 1.Clone the repository
-git clone https://github.com/JoriRas/Vehicle-Diagnostic-Tool.git
-cd vehicle-diagnostic-tool
+git clone https://github.com/JoriRas/VDT-Sim.git
+cd VDT-Sim
 
 2.Install dependencies
 pip install -r requirements.txt
@@ -32,12 +33,13 @@ Open your browser at http://localhost:8501
 
 ![alt text](Screenshot_1128.png)
 
-Future Improvements:
-
-"Clear Data" button
-
-Random error code injection option
-
+📝 Future Improvements
 Export diagnostic report as PDF
 
-Mobile-friendly UI
+Add simulation speed control
+
+Mobile-friendly layout
+
+💡 Project Purpose
+This project was created as part of a professional portfolio to demonstrate knowledge of vehicle systems, diagnostic protocols (OBD-II), data visualization, and Python software development.
+It aligns with roles involving vehicle electrical and software systems, such as the Vehicle Systems Specialist position at Patria.
