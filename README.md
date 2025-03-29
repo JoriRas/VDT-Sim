@@ -16,6 +16,10 @@ It was developed as a practical demonstration of real-time vehicle system data v
 ✅ Simple & responsive web interface (Streamlit)
 ✅ Designed as a learning and diagnostic demonstration tool
 
+🚀 Live Demo
+🌐 Try it live on Streamlit Cloud:
+https://vdt-sim-jv2fn3jgcg4ihr6vy49xvu.streamlit.app/
+
 🖥️ Installation
 1.Clone the repository
 git clone https://github.com/JoriRas/VDT-Sim.git
