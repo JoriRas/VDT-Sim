@@ -27,6 +27,12 @@ selected_code =None
 if show_error:
     selected_code = st.sidebar.selectbox("Choose Errror Code", data["DTC"].unique())
 
+if st.sidebar.button("Clear Data"):
+    st.session_state.rpm_history = []
+    st.session_state.speed_history = []
+    st.session_state.engine_history = []
+    st.success("Data history cleared!")
+
 #---Main Panel---
 st.title("Vehicle Diagnostic Tool Simulator")
 
